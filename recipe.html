@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creamy Pasta Recipe</title>
+  <style>
+    /* Overall page style */
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(120deg, #ffe4b5, #ffb6c1);
+      color: #333;
+      text-align: center;
+      transition: background 0.5s;
+    }
+
+    header {
+      background: #ff6f61;
+      color: white;
+      padding: 20px;
+      font-size: 2rem;
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      letter-spacing: 1px;
+      animation: fadeInDown 1s ease;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 30px auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      animation: fadeInUp 1.2s ease;
+    }
+
+    h2 {
+      color: #ff6f61;
+      margin-bottom: 15px;
+      font-size: 1.8rem;
+    }
+
+    h3 {
+      margin-top: 20px;
+      color: #333;
+      font-size: 1.4rem;
+      text-decoration: underline;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0;
+    }
+
+    ul li {
+      background: #ffe9d6;
+      margin: 8px 0;
+      padding: 12px;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    ul li:hover {
+      transform: scale(1.03);
+      background: #ffd9b3;
+    }
+
+    button {
+      background: #ff6f61;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #e85b50;
+      transform: scale(1.05);
+    }
+
+    .tips {
+      margin-top: 15px;
+      padding: 15px;
+      background: #fff8dc;
+      border-radius: 12px;
+      display: none;
+      font-size: 1rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      animation: fadeIn 0.8s ease;
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 0.9rem;
+      color: #444;
+      padding: 10px;
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header>🍝 Creamy Pasta Recipe</header>
+
+  <div class="container">
+    <h2>Creamy Garlic Parmesan Pasta</h2>
+
+    <h3>Ingredients</h3>
+    <ul>
+      <li>200g pasta (penne or spaghetti)</li>
+      <li>2 tbsp olive oil</li>
+      <li>1 cup heavy cream</li>
+      <li>2 cloves garlic (minced)</li>
+      <li>½ cup grated parmesan</li>
+      <li>Salt and pepper to taste</li>
+      <li>Fresh basil for garnish</li>
+    </ul>
+
+    <h3>Steps</h3>
+    <ul>
+      <li>Boil the pasta in salted water until al dente. Drain and set aside.</li>
+      <li>Sauté minced garlic in olive oil until fragrant.</li>
+      <li>Add heavy cream and simmer gently.</li>
+      <li>Stir in parmesan cheese until the sauce thickens.</li>
+      <li>Mix in the pasta, season with salt and pepper.</li>
+      <li>Garnish with fresh basil and serve hot.</li>
+    </ul>
+
+    <button onclick="showTips()">Show Chef's Tips</button>
+    <div class="tips" id="tips-box"></div>
+  </div>
+
+  <footer>© 2025 My Recipe Page | Cook with Love ❤️</footer>
+
+  <script>
+    function showTips() {
+      const tips = [
+        "Use freshly grated parmesan for the richest flavor.",
+        "Reserve some pasta water to adjust sauce consistency.",
+        "Don't overcook the pasta — al dente is perfect!",
+        "Top with chili flakes for a spicy kick."
+      ];
+      const tipsBox = document.getElementById("tips-box");
+      tipsBox.style.display = "block";
+      tipsBox.innerHTML = `<strong>Chef's Tips:</strong><ul>${tips.map(t => `<li>${t}</li>`).join('')}</ul>`;
+    }
+  </script>
+</body>
+</html>
